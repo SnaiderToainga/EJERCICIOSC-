@@ -43,7 +43,6 @@ public:
                 return;
             }
         }
-
         cout << "Asistente no encontrado\n";
     }
 
@@ -63,7 +62,6 @@ public:
             cout << i+1 << ". " << asistentes[i] << endl;
         }
     }
-
     // Tamaño de la lista
     void size() {
 
@@ -74,12 +72,10 @@ public:
 int main() {
 
     Evento evento;
-
     int opcion;
     string nombre;
 
     do {
-
         cout << "\n===== SISTEMA DE EVENTOS =====\n";
         cout << "1. Agregar asistente\n";
         cout << "2. Eliminar asistente\n";
@@ -90,31 +86,24 @@ int main() {
 
         cout << "Seleccione una opcion: ";
         cin >> opcion;
-
         cin.ignore(); 
 
         switch(opcion) {
-
         case 1:
-
             cout << "Ingrese nombre del asistente: ";
             getline(cin, nombre);
 
             evento.insertar(nombre);
-
             break;
 
         case 2:
-
             cout << "Ingrese nombre del asistente a eliminar: ";
             getline(cin, nombre);
 
             evento.eliminar(nombre);
-
             break;
 
         case 3:
-
             cout << "Ingrese nombre a buscar: ";
             getline(cin, nombre);
 
@@ -123,30 +112,22 @@ int main() {
             break;
 
         case 4:
-
             evento.mostrar();
-
             break;
 
         case 5:
-
             evento.size();
-
             break;
 
         case 6:
-
             cout << "Saliendo del sistema...\n";
-
             break;
 
         default:
-
             cout << "Opcion invalida\n";
         }
 
     } while(opcion != 6);
-
     return 0;
 }
 
